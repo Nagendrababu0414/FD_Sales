@@ -1,0 +1,21 @@
+<aura:component controller="FoodIn" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="foodCollection" type="Map"/>
+    <aura:attribute name="recipes" type="List"/>
+    <lightning:card title="Food Spoonacular" iconName="utility:food_and_drink">
+        <br/>
+        <lightning:button variant="brand" label="Search" onclick="{!c.foodFun}"/>
+            <div>
+            <table><tr>
+                <th>id</th>
+                <th>title</th>
+                </tr>
+                <aura:iteration items="{!v.recipes}" var="r">
+                    <tr><td>{!r.id}</td>
+                        <td>{!r.title}</td>
+                    </tr>
+                </aura:iteration>
+            </table>
+            </div>
+           
+    </lightning:card>
+</aura:component>

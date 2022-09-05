@@ -1,0 +1,16 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name='fname' type='string'/>
+    <aura:attribute name='lname' type='string'/>
+    <aura:attribute name='flname' type='string'/>
+    <lightning:card title ='Full Name'>
+        <div>
+            <lightning:input label='First Name' value='{!v.fname}'/>
+            <lightning:input label ='Last Name' value='{!v.lname}'/>
+            <br/>
+            <lightning:button variant='brand' label='save' onclick='{!c.fullName}'/>
+        </div>
+        <br/>
+        <div>Full Name is "{!v.flname}"
+        </div>
+    </lightning:card>
+</aura:component>

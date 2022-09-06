@@ -24,6 +24,7 @@ public with sharing class EventSelector {
             return null;
           } 
           else{
+            
             return [Select Id, AccountId, Number_of_Dentist__c, Number_of_Hygienist__c from Event where id =: eventid WITH SECURITY_ENFORCED LIMIT 1 ];        //Method: updateDentistHygienist
            } 
         }
